@@ -1,10 +1,19 @@
 
-$main-height: calc(100% - 55px);
+%nav-room
+    min-height: calc(100% - 55px)
+
+html
+    width: 100%
+
+body
+    width: 100%
+    display: flex
+    flex-direction: column
 
 main
+    @extend %nav-room
     width: 100%
-    min-height: $main-height;
-    padding-top: 55px;
+    display: flex
     
 
 
