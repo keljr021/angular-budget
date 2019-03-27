@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './layout/home/home.component';
 import { BuildTableComponent } from './layout/build-table/build-table.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
@@ -13,12 +11,12 @@ import { OutputTableComponent } from './components/output-table/output-table.com
 import { ValuesComponent } from './components/values/values.component';
 import { StylesComponent } from './components/styles/styles.component';
 import { DownloadComponent } from './components/download/download.component';
+import { HeadComponent } from './layout/head/head.component';
+import { FootComponent } from './layout/foot/foot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     HomeComponent,
     BuildTableComponent,
     BreadcrumbsComponent,
@@ -26,7 +24,9 @@ import { DownloadComponent } from './components/download/download.component';
     OutputTableComponent,
     ValuesComponent,
     StylesComponent,
-    DownloadComponent
+    DownloadComponent,
+    HeadComponent,
+    FootComponent
   ],
   imports: [
     BrowserModule,
