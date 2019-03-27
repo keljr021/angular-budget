@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
@@ -13,6 +12,8 @@ import { StylesComponent } from './components/styles/styles.component';
 import { DownloadComponent } from './components/download/download.component';
 import { HeadComponent } from './layout/head/head.component';
 import { FootComponent } from './layout/foot/foot.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FootComponent } from './layout/foot/foot.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
