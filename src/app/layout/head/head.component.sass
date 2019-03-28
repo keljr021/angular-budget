@@ -12,16 +12,23 @@ $secondary-color: blue
 .head 
     @extend %primary-over
     display: flex
-    height: 50px
-    padding-bottom: 5px
+    align-items: center
+    justify-content: space-between
+    height: 40px
+    padding: 10px 20px
 
 .head-title
     flex-grow: 2
+    font-size: 24px
 
 .head-nav
     flex-grow: 1
     text-align: right
 
     a
-        padding: 5px
+        width: calc(50% - 20px)
+        padding: 5px 10px
+        text-decoration: none
+        color: #fff
+        
 
