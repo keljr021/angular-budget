@@ -1,10 +1,10 @@
-<main>
+<div [ngClass]="'flexbox'">
   <section>
     <h3>Build a New Table</h3>
     <app-breadcrumbs></app-breadcrumbs>
     <app-structure></app-structure>
   </section>
-  <section>
+  <section [ngClass]="'output'">
     <app-output-table></app-output-table>
   </section>
-</main>
+</div>

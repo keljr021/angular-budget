@@ -2,6 +2,11 @@
 %nav-room
     min-height: calc(100% - 55px)
 
+%flexbox
+    width: 100%
+    display: flex
+    
+
 html
     width: 100%
 
@@ -10,10 +15,7 @@ body
     display: flex
     flex-direction: column
 
-main
+.flexbox
     @extend %nav-room
-    width: 100%
-    display: flex
-    
-
+    @extend %flexbox    
 
