@@ -1,3 +1,24 @@
 <div>
-  [ structure ]
+  <h5>1. Structure</h5>
+
+  <div>
+    <label for="startDate">Start Date: </label>
+    <input type="text" name="startDate" />
+  </div>
+  <div>
+    <label for="endDate">End Date: </label>
+    <input type="text" name="endDate" />
+  </div>
+
+  <div>
+    <label for="columns">Separate columns by: </label>
+    <input type="radio" name="columns"> Day
+    <input type="radio" name="columns"> Week
+    <input type="radio" name="columns"> Month
+  </div>
+
+  <div>
+    <button [ngClass]="'nextBtn'">Next</button>
+  </div>
+
 </div>
