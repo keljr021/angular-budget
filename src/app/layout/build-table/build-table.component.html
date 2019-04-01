@@ -3,11 +3,11 @@
     <h3>Build a New Table</h3>
     <app-breadcrumbs></app-breadcrumbs>
 
-    <div [ngSwitch]="getStep">
-      <app-structure></app-structure>
-      <app-values></app-values>
-      <app-styles></app-styles>
-      <app-download></app-download>
+    <div>
+      <app-structure *ngIf="stepIdx == 0"></app-structure>
+      <app-values *ngIf="stepIdx == 1"></app-values>
+      <app-styles *ngIf="stepIdx == 2"></app-styles>
+      <app-download *ngIf="stepIdx == 3"></app-download>
 
     </div>
       

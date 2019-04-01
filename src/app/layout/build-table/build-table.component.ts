@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuildTableComponent implements OnInit {
 
-  steps:string[] = ['structure', 'values', 'styles', 'download'];
-  stepIdx:number = 0;
+  steps:string[];
+  stepIdx:number;
 
-  constructor() { }
+  constructor() {
+    this.steps = ['structure', 'values', 'styles', 'download'];
+    this.stepIdx = 0;
+  }
 
   ngOnInit() { 
     
