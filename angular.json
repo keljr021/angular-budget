@@ -28,10 +28,9 @@
             ],
             "styles": [
               "src/styles.sass",
-              "node_modules/material-design-lite/material.min.css"
             ],
             "scripts": [
-              "node_modules/material-design-lite/material.min.js"
+              
             ],
             "es5BrowserSupport": true
           },

@@ -13,7 +13,7 @@ import { DownloadComponent } from './components/download/download.component';
 import { HeadComponent } from './layout/head/head.component';
 import { FootComponent } from './layout/foot/foot.component';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule    
+    BrowserAnimationsModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
