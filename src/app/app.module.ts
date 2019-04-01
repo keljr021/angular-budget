@@ -14,6 +14,7 @@ import { HeadComponent } from './layout/head/head.component';
 import { FootComponent } from './layout/foot/foot.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule    
+    BrowserAnimationsModule,
+    MatButtonModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

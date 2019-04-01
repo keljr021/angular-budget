@@ -28,6 +28,7 @@
             ],
             "styles": [
               "src/styles.sass",
+              "src/custom-material-ui.sass"
             ],
             "scripts": [
               
