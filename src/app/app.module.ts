@@ -14,7 +14,8 @@ import { HeadComponent } from './layout/head/head.component';
 import { FootComponent } from './layout/foot/foot.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatStepperModule } from '@angular/material';
+import { StepButtonsComponent } from './components/step-buttons/step-buttons.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,15 @@ import { MatButtonModule } from '@angular/material';
     StylesComponent,
     DownloadComponent,
     HeadComponent,
-    FootComponent
+    FootComponent,
+    StepButtonsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule    
+    MatButtonModule,  
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

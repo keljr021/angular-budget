@@ -1,48 +1,37 @@
 <div>
-  <h5>2. Values</h5>
+  <label for="startDate">Add Title?</label>
+  <input type="text" name="startDate" />
+</div>
+
+<div>
+  <label for="endDate">Add Average Values?</label>
+  <input type="radio" name="columns"> No
+  <input type="radio" name="columns"> Columns Only
+  <input type="radio" name="columns"> Rows Only
+</div>
+
+<div>
+  <label for="columns">Add Total Values? </label>
+  <input type="radio" name="columns"> Yes
+  <input type="radio" name="columns"> No
+</div>
+
+<div [ngClass]="'value-box'">
+  <label for="columns">Enter Values By Row</label>
 
   <div>
-    <label for="startDate">Add Title?</label>
-    <input type="text" name="startDate" />
+    <label for="val1">Column 1</label>
+    <input type="text" name="val1" />
   </div>
-
   <div>
-    <label for="endDate">Add Average Values?</label>
-    <input type="radio" name="columns"> No
-    <input type="radio" name="columns"> Columns Only
-    <input type="radio" name="columns"> Rows Only
+    <label for="val2">Column 2</label>
+    <input type="text" name="val2" />
   </div>
-
   <div>
-    <label for="columns">Add Total Values? </label>
-    <input type="radio" name="columns"> Yes
-    <input type="radio" name="columns"> No
+    <label for="val3">Column 3</label>
+    <input type="text" name="val3" />
   </div>
-
-  <div [ngClass]="'value-box'">
-    <label for="columns">Enter Values By Row</label>
-
-    <div>
-      <label for="val1">Column 1</label>
-      <input type="text" name="val1" />
-    </div>
-    <div>
-      <label for="val2">Column 2</label>
-      <input type="text" name="val2" />
-    </div>
-    <div>
-      <label for="val3">Column 3</label>
-      <input type="text" name="val3" />
-    </div>
-    
-    
-    <button [ngClass]="'saveBtn'">Save to Table</button>
-  </div>
-
-  <div [ngClass]="'buttonbox'">
-    <button mat-raised-button color="accent">Prev</button>
-    <button mat-raised-button color="accent">Next</button>
-  </div>
-
-
+  
+  
+  <button [ngClass]="'saveBtn'">Save to Table</button>
 </div>

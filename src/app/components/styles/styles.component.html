@@ -1,53 +1,43 @@
 <div>
-  <h5>3. Styles</h5>
-
+  <h6>Table Style</h6>
   <div>
-    <h6>Table Style</h6>
-    <div>
-      <label for="tableBg">Background Color: </label>
-      <input type="text" name="tableBg" />
-    </div>
-    <div>
-      <label for="highlightRow">Separate Rows with Highlights: </label>
-      <input type="checkbox" name="highlightRow" value="true" />
-    </div>
-    <div>
-      <label for="highlightCol">Separate Columns with Highlights: </label>
-      <input type="checkbox" name="highlightCol" value="true" />
-    </div>
-    <div>
-      <label for="tableFont">Font Style: </label>
-      <input type="text" name="tableFont" />
-    </div>
-    <div>
-      <label for="table">Font Color: </label>
-      <input type="text" name="endDate" />
-    </div>
+    <label for="tableBg">Background Color: </label>
+    <input type="text" name="tableBg" />
   </div>
-
   <div>
-    <h6>Table Borders</h6>
-    <div>
-      <label for="border">Border Style: </label>
-      <input type="radio" name="border" value="none" /> None 
-      <input type="radio" name="border" value="full" /> Full Borders
-      <input type="radio" name="border" value="slim" /> Slim Borders
-    </div>
-    <div>
-      <label for="border">Border Style: </label>
-      <input type="radio" name="border" value="a" /> A
-      <input type="radio" name="border" value="b" /> B
-      <input type="radio" name="border" value="c" /> C
-    </div>
-    <div>
-      <label for="borderColor">Color: </label>
-      <input type="text" name="borderColor" />
-    </div>
+    <label for="highlightRow">Separate Rows with Highlights: </label>
+    <input type="checkbox" name="highlightRow" value="true" />
   </div>
-
-  <div [ngClass]="'buttonbox'">
-    <button mat-raised-button color="accent">Prev</button>
-    <button mat-raised-button color="accent">Next</button>
+  <div>
+    <label for="highlightCol">Separate Columns with Highlights: </label>
+    <input type="checkbox" name="highlightCol" value="true" />
   </div>
+  <div>
+    <label for="tableFont">Font Style: </label>
+    <input type="text" name="tableFont" />
+  </div>
+  <div>
+    <label for="table">Font Color: </label>
+    <input type="text" name="endDate" />
+  </div>
+</div>
 
+<div>
+  <h6>Table Borders</h6>
+  <div>
+    <label for="border">Border Style: </label>
+    <input type="radio" name="border" value="none" /> None 
+    <input type="radio" name="border" value="full" /> Full Borders
+    <input type="radio" name="border" value="slim" /> Slim Borders
+  </div>
+  <div>
+    <label for="border">Border Style: </label>
+    <input type="radio" name="border" value="a" /> A
+    <input type="radio" name="border" value="b" /> B
+    <input type="radio" name="border" value="c" /> C
+  </div>
+  <div>
+    <label for="borderColor">Color: </label>
+    <input type="text" name="borderColor" />
+  </div>
 </div>
