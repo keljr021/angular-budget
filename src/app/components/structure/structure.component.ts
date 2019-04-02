@@ -10,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructureComponent implements OnInit {
 
+  startDate:string;
+  endDate:string;
+  columns:string;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  storeStartDate(value:string) {
+    console.log('start date:', value);
+    this.startDate = value;
+  }
+
+  storeEndDate(value: string) {
+    console.log('end date:', value);
+    this.endDate = value;
+  }  
 
 }

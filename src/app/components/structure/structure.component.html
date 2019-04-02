@@ -1,17 +1,26 @@
 <div>
-  <div>
-    <label for="startDate">Start Date: </label>
-    <input type="text" name="startDate" />
-  </div>
-  <div>
-    <label for="endDate">End Date: </label>
-    <input type="text" name="endDate" />
+  <div>  
+    <mat-form-field color="accent">
+      <input matInput [matDatepicker]="startPicker" placeholder="Start Date">
+      <mat-datepicker-toggle matSuffix [for]="startPicker" (dateInput)="storeStartDate(startDate.value)" (dateChange)="storeStartDate(startDate.value)"></mat-datepicker-toggle>
+      <mat-datepicker #startPicker></mat-datepicker>
+    </mat-form-field>
+
+    &nbsp;
+    
+    <mat-form-field color="accent">
+      <input matInput [matDatepicker]="endPicker" placeholder="End Date">
+      <mat-datepicker-toggle matSuffix [for]="endPicker" (dateInput)="storeEndDate(endDate.value)"
+        (dateChange)="storeEndDate(startDate.value)"></mat-datepicker-toggle>
+      <mat-datepicker #endPicker></mat-datepicker>
+    </mat-form-field>
   </div>
 
   <div>
-    <label for="columns">Separate columns by: </label>
-    <input type="radio" name="columns"> Day
-    <input type="radio" name="columns"> Week
-    <input type="radio" name="columns"> Month
+    <mat-radio-group aria-label="Separate columns by...">
+      <mat-radio-button #columns value="day">Day</mat-radio-button>
+      <mat-radio-button #columns value="week">Week</mat-radio-button>
+      <mat-radio-button #columns value="month">Month</mat-radio-button>
+    </mat-radio-group>
   </div>
 </div>

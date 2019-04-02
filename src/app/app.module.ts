@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
 import { BuildTableComponent } from './layout/build-table/build-table.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+import { StepButtonsComponent } from './components/step-buttons/step-buttons.component';
 import { StructureComponent } from './components/structure/structure.component';
 import { OutputTableComponent } from './components/output-table/output-table.component';
 import { ValuesComponent } from './components/values/values.component';
@@ -14,8 +16,7 @@ import { HeadComponent } from './layout/head/head.component';
 import { FootComponent } from './layout/foot/foot.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatStepperModule } from '@angular/material';
-import { StepButtonsComponent } from './components/step-buttons/step-buttons.component';
+import { MatInputModule, MatButtonModule, MatStepperModule, MatNativeDateModule, MatDatepickerModule, MatRadioModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -36,8 +37,13 @@ import { StepButtonsComponent } from './components/step-buttons/step-buttons.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
     MatButtonModule,  
-    MatStepperModule
+    MatStepperModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
