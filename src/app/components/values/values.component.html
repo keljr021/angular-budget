@@ -1,37 +1,26 @@
 <div>
-  <label for="startDate">Add Title?</label>
-  <input type="text" name="startDate" />
-</div>
+  <div [ngClass]="'row-box'">
+    <button mat-icon-button class="row-box-left">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
 
-<div>
-  <label for="endDate">Add Average Values?</label>
-  <input type="radio" name="columns"> No
-  <input type="radio" name="columns"> Columns Only
-  <input type="radio" name="columns"> Rows Only
-</div>
+    <h3 [ngClass]="'row-box-header'">Row ##</h3>
 
-<div>
-  <label for="columns">Add Total Values? </label>
-  <input type="radio" name="columns"> Yes
-  <input type="radio" name="columns"> No
-</div>
-
-<div [ngClass]="'value-box'">
-  <label for="columns">Enter Values By Row</label>
-
-  <div>
-    <label for="val1">Column 1</label>
-    <input type="text" name="val1" />
+    <button mat-icon-button class="row-box-right">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
   </div>
-  <div>
-    <label for="val2">Column 2</label>
-    <input type="text" name="val2" />
-  </div>
-  <div>
-    <label for="val3">Column 3</label>
-    <input type="text" name="val3" />
-  </div>
-  
-  
-  <button [ngClass]="'saveBtn'">Save to Table</button>
+
+  <mat-form-field color="accent" class="column-value">
+    <input matInput type="text" #val1 placeholder="Value 1" />
+  </mat-form-field>
+
+  <mat-form-field color="accent" class="column-value">
+    <input matInput type="text" #val2 placeholder="Value 2" />
+  </mat-form-field>
+
+  <mat-form-field color="accent" class="column-value">
+    <input matInput type="text" #val3 placeholder="Value 3" />
+  </mat-form-field>
+
 </div>

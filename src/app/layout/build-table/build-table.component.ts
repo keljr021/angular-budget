@@ -22,7 +22,7 @@ export class BuildTableComponent implements OnInit {
 
   constructor() {
     this.steps = ['structure', 'values', 'styles', 'download'];
-    this.stepIdx = 0;
+    this.stepIdx = 1;
     this.addAverage = false;
     this.addTotal = false;
   }
