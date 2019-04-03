@@ -1,43 +1,58 @@
 <div>
-  <h6>Table Style</h6>
   <div>
-    <label for="tableBg">Background Color: </label>
-    <input type="text" name="tableBg" />
+    <h4>Background</h4>
+    <mat-form-field color="accent">
+      <input matInput type="text" #val1 placeholder="Color..." />
+    </mat-form-field>
   </div>
   <div>
-    <label for="highlightRow">Separate Rows with Highlights: </label>
-    <input type="checkbox" name="highlightRow" value="true" />
+    <mat-slide-toggle>Highlight each row</mat-slide-toggle>
   </div>
   <div>
-    <label for="highlightCol">Separate Columns with Highlights: </label>
-    <input type="checkbox" name="highlightCol" value="true" />
+    <mat-slide-toggle>Highlight each column</mat-slide-toggle>
   </div>
+
   <div>
-    <label for="tableFont">Font Style: </label>
-    <input type="text" name="tableFont" />
-  </div>
-  <div>
-    <label for="table">Font Color: </label>
-    <input type="text" name="endDate" />
+    <h4>Font</h4>
+    <mat-form-field>
+      <mat-label>Font Style</mat-label>
+      <mat-select>
+        <mat-option [value]="A">A</mat-option>
+        <mat-option [value]="B">B</mat-option>
+        <mat-option [value]="C">C</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    &nbsp;
+  
+    <mat-form-field color="accent">
+      <input matInput type="text" #val1 placeholder="Color..." />
+    </mat-form-field>
   </div>
 </div>
 
 <div>
-  <h6>Table Borders</h6>
+  <h4>Borders</h4>
   <div>
-    <label for="border">Border Style: </label>
-    <input type="radio" name="border" value="none" /> None 
-    <input type="radio" name="border" value="full" /> Full Borders
-    <input type="radio" name="border" value="slim" /> Slim Borders
+    <mat-radio-group aria-label="border">
+      <mat-radio-button #border value="day">None</mat-radio-button>
+      <mat-radio-button #border value="week">Full</mat-radio-button>
+      <mat-radio-button #border value="month">Collapsed</mat-radio-button>
+    </mat-radio-group>
   </div>
   <div>
-    <label for="border">Border Style: </label>
-    <input type="radio" name="border" value="a" /> A
-    <input type="radio" name="border" value="b" /> B
-    <input type="radio" name="border" value="c" /> C
+    <mat-form-field>
+      <mat-label>Border Style</mat-label>
+      <mat-select>
+        <mat-option [value]="A">A</mat-option>
+        <mat-option [value]="B">B</mat-option>
+        <mat-option [value]="C">C</mat-option>
+      </mat-select>
+    </mat-form-field>  
   </div>
   <div>
-    <label for="borderColor">Color: </label>
-    <input type="text" name="borderColor" />
+    <mat-form-field color="accent">
+      <input matInput type="text" #val1 placeholder="Color..." />
+    </mat-form-field>
   </div>
 </div>

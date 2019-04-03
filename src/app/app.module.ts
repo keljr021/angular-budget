@@ -16,7 +16,7 @@ import { HeadComponent } from './layout/head/head.component';
 import { FootComponent } from './layout/foot/foot.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, MatStepperModule, MatNativeDateModule, MatDatepickerModule, MatRadioModule, MatSlideToggleModule } from '@angular/material';
+import { MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, MatStepperModule, MatNativeDateModule, MatDatepickerModule, MatRadioModule, MatSlideToggleModule, MatSelectModule, MatOptionModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,9 @@ import { MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, Mat
     MatNativeDateModule,
     MatDatepickerModule,
     MatRadioModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSelectModule, 
+    MatOptionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
