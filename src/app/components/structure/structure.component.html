@@ -1,6 +1,19 @@
 <div>
   <div [ngClass]="'left-half'">  
     <div>
+      <h4>Insert Title?</h4>
+      <mat-radio-group aria-label="title">
+        <mat-radio-button #title value="no">No</mat-radio-button>
+        <mat-radio-button #title value="yes">Yes</mat-radio-button>
+      </mat-radio-group>
+      <br />
+    
+      <mat-form-field class="title-value">
+        <input matInput type="text" #titleValue placeholder="Enter title...">
+      </mat-form-field>
+    </div>
+    
+    <div>
       <h4>Date Range</h4>
       <mat-form-field color="accent">
         <input matInput [matDatepicker]="startPicker" placeholder="Start Date">
@@ -25,19 +38,6 @@
         <mat-radio-button #columns value="week">Week</mat-radio-button>
         <mat-radio-button #columns value="month">Month</mat-radio-button>
       </mat-radio-group>
-    </div>
-
-    <div>
-      <h4>Insert Title?</h4>
-      <mat-radio-group aria-label="title">
-        <mat-radio-button #title value="no">No</mat-radio-button>
-        <mat-radio-button #title value="yes">Yes</mat-radio-button>
-      </mat-radio-group>
-      <br />
-    
-      <mat-form-field class="title-value">
-        <input matInput type="text" #titleValue placeholder="Enter title...">
-      </mat-form-field>
     </div>
 
     <div>
