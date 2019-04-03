@@ -1,57 +1,61 @@
 <div>
-  <div>  
-    <h4>Date Range</h4>
-    <mat-form-field color="accent">
-      <input matInput [matDatepicker]="startPicker" placeholder="Start Date">
-      <mat-datepicker-toggle matSuffix [for]="startPicker" (dateInput)="storeStartDate(startDate.value)" (dateChange)="storeStartDate(startDate.value)"></mat-datepicker-toggle>
-      <mat-datepicker #startPicker></mat-datepicker>
-    </mat-form-field>
+  <div [ngClass]="'left-half'">  
+    <div>
+      <h4>Date Range</h4>
+      <mat-form-field color="accent">
+        <input matInput [matDatepicker]="startPicker" placeholder="Start Date">
+        <mat-datepicker-toggle matSuffix [for]="startPicker" (dateInput)="storeStartDate(startDate.value)" (dateChange)="storeStartDate(startDate.value)"></mat-datepicker-toggle>
+        <mat-datepicker #startPicker></mat-datepicker>
+      </mat-form-field>
 
-    &nbsp;
+      &nbsp;
+      
+      <mat-form-field color="accent">
+        <input matInput [matDatepicker]="endPicker" placeholder="End Date">
+        <mat-datepicker-toggle matSuffix [for]="endPicker" (dateInput)="storeEndDate(endDate.value)"
+          (dateChange)="storeEndDate(startDate.value)"></mat-datepicker-toggle>
+        <mat-datepicker #endPicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <h4>Separate columns by: </h4>
+      <mat-radio-group aria-label="columns">
+        <mat-radio-button #columns value="day">Day</mat-radio-button>
+        <mat-radio-button #columns value="week">Week</mat-radio-button>
+        <mat-radio-button #columns value="month">Month</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div>
+      <h4>Insert Title?</h4>
+      <mat-radio-group aria-label="title">
+        <mat-radio-button #title value="no">No</mat-radio-button>
+        <mat-radio-button #title value="yes">Yes</mat-radio-button>
+      </mat-radio-group>
+      <br />
     
-    <mat-form-field color="accent">
-      <input matInput [matDatepicker]="endPicker" placeholder="End Date">
-      <mat-datepicker-toggle matSuffix [for]="endPicker" (dateInput)="storeEndDate(endDate.value)"
-        (dateChange)="storeEndDate(startDate.value)"></mat-datepicker-toggle>
-      <mat-datepicker #endPicker></mat-datepicker>
-    </mat-form-field>
-  </div>
+      <mat-form-field class="title-value">
+        <input matInput type="text" #titleValue placeholder="Enter title...">
+      </mat-form-field>
+    </div>
 
-  <div>
-    <h4>Separate columns by: </h4>
-    <mat-radio-group aria-label="columns">
-      <mat-radio-button #columns value="day">Day</mat-radio-button>
-      <mat-radio-button #columns value="week">Week</mat-radio-button>
-      <mat-radio-button #columns value="month">Month</mat-radio-button>
-    </mat-radio-group>
-  </div>
-
-  <div>
-    <h4>Insert Title?</h4>
-    <mat-radio-group aria-label="title">
-      <mat-radio-button #title value="no">No</mat-radio-button>
-      <mat-radio-button #title value="yes">Yes</mat-radio-button>
-    </mat-radio-group>
-  
-    <mat-form-field class="title-value">
-      <input matInput type="text" #titleValue placeholder="Enter title...">
-    </mat-form-field>
-  </div>
-  
-  <div>
-    <h4>Insert Averages?</h4>
-    <mat-radio-group aria-label="average">
-      <mat-radio-button #average value="no">No</mat-radio-button>
-      <mat-radio-button #average value="columns">Columns Only</mat-radio-button>
-      <mat-radio-button #average value="rows">Rows Only</mat-radio-button>
-    </mat-radio-group>
-  </div>
-  
-  <div>
-    <h4>Insert Total Values? </h4>
-    <mat-radio-group aria-label="total">
-      <mat-radio-button #total value="no">No</mat-radio-button>
-      <mat-radio-button #total value="columns">Yes</mat-radio-button>
-    </mat-radio-group>
+    <div>
+      <h4>Insert Averages?</h4>
+      <mat-radio-group aria-label="average">
+        <mat-radio-button #average value="no">No</mat-radio-button>
+        <mat-radio-button #average value="columns">Columns Only</mat-radio-button>
+        <mat-radio-button #average value="rows">Rows Only</mat-radio-button>
+        <mat-radio-button #average value="both">Both</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    
+    <div>
+      <h4>Insert Total Values? </h4>
+      <mat-radio-group aria-label="total">
+        <mat-radio-button #total value="no">No</mat-radio-button>
+        <mat-radio-button #total value="columns">Yes</mat-radio-button>
+      </mat-radio-group>
+    </div>
   </div>
 </div>
