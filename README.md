@@ -2,9 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6. The project builds an HTML budget table based on user values.
 
-*Incompleted at the moment
+(Currently in progress)
 
-## Todos
+## What's Left
  - Add data binding values
  - Output table to be auto-filled based on user values
  - Add ability to download .html files
