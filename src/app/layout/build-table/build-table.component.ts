@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class BuildTableComponent implements OnInit {
 
+  addCaption:boolean;
   caption:string;
   headers:string[];
   
@@ -18,6 +19,7 @@ export class BuildTableComponent implements OnInit {
   styles:string;
 
   constructor() {
+    this.addCaption = false;
     this.addAverage = false;
     this.addTotal = false;
   }
