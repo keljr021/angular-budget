@@ -8,9 +8,6 @@ import { FormControl } from '@angular/forms';
 })
 export class BuildTableComponent implements OnInit {
 
-  steps:string[];
-  stepIdx:number;
-
   caption:string;
   headers:string[];
   
@@ -21,27 +18,12 @@ export class BuildTableComponent implements OnInit {
   styles:string;
 
   constructor() {
-    this.steps = ['structure', 'values', 'styles', 'download'];
-    this.stepIdx = 0;
     this.addAverage = false;
     this.addTotal = false;
   }
 
   ngOnInit() { 
     
-  }
-
-  getStep(steps:string[], stepIdx:number) {
-    let activeStep = this.steps[this.stepIdx];
-    return activeStep;
-  }
-
-  nextStep() {
-    this.stepIdx = this.stepIdx + 1;
-  }
-
-  prevStep() {
-    this.stepIdx = this.stepIdx - 1;
   }
 
 }

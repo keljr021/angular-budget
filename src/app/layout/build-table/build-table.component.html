@@ -1,17 +1,20 @@
 <div [ngClass]="'flexbox'">
   <section>
     <h2>Build a New Table</h2>
-    <app-breadcrumbs></app-breadcrumbs>
-
-    <div>
-      <app-structure *ngIf="stepIdx == 0"></app-structure>
-      <app-values *ngIf="stepIdx == 1"></app-values>
-      <app-styles *ngIf="stepIdx == 2"></app-styles>
-      <app-download *ngIf="stepIdx == 3"></app-download>
-    </div>
-    
-    <!-- <app-step-buttons></app-step-buttons> -->
-      
+    <mat-horizontal-stepper>
+      <mat-step label="Build Structure">
+        <app-structure></app-structure>
+      </mat-step>
+      <mat-step label="Enter Values">
+        <app-values></app-values>
+      </mat-step>
+      <mat-step label="Configure Styles">
+        <app-styles></app-styles>
+      </mat-step>
+      <mat-step label="Download">
+        <app-download></app-download>
+      </mat-step>
+    </mat-horizontal-stepper>
   </section>
   <section [ngClass]="'output'">
     <app-output-table></app-output-table>

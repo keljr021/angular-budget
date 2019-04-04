@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
 import { BuildTableComponent } from './layout/build-table/build-table.component';
-import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
-import { StepButtonsComponent } from './components/step-buttons/step-buttons.component';
 import { StructureComponent } from './components/structure/structure.component';
 import { OutputTableComponent } from './components/output-table/output-table.component';
 import { ValuesComponent } from './components/values/values.component';
@@ -23,15 +21,13 @@ import { MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, Mat
     AppComponent,
     HomeComponent,
     BuildTableComponent,
-    BreadcrumbsComponent,
     StructureComponent,
     OutputTableComponent,
     ValuesComponent,
     StylesComponent,
     DownloadComponent,
     HeadComponent,
-    FootComponent,
-    StepButtonsComponent
+    FootComponent
   ],
   imports: [
     BrowserModule,
