@@ -1,21 +1,17 @@
 <div>
   <table>
-    <caption>Table Caption</caption>
+    <caption>{{ caption }}</caption>
     <tr>
-      <th>Column</th>
-      <th>Column</th>
-      <th>Column</th>
+      <th *ngFor="header in headerArray">
+        {{ header }}
+      </th>
     </tr>
-    <tr>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
+    <tr *ngFor="row in cellArray">
+      <td *ngFor="cell in row">
+        {{ cell }}
+      </td>
     </tr>
-    <tr>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-    </tr>
+
     <tr [ngClass]="'add-row'">
       <td colspan="3">
         <button mat-icon-button color="accent" aria-placeholder="Add row">
