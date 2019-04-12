@@ -1,10 +1,23 @@
 .output-menu
     position: fixed
     width: 200px
-    height: calc(100% - 80px)
+    max-height: calc(100% - 80px)
+    overflow: hidden auto
     bottom: 0
-    right: 0
-    background-color: #333
-    color: #fff
+    left: 0
+    background-color: #fff
     padding: 10px
-    text-align: center
+    // display: none
+
+    .show
+        display: inline
+
+div 
+    padding: 10px 0
+
+.mat-form-field
+    width: 100%
+
+.mat-radio-button
+    display: block
+    padding: 5px
