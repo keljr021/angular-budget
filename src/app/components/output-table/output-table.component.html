@@ -11,15 +11,19 @@
 
     <tr *ngFor="let row of rows">
       <td>{{ row.name }}</td>
-      
-      <td *ngFor="let value of row.values">
-        {{ value }}
+
+      <td *ngFor="let value of row.values" (click)="clickedCell()">
+        <span [ngClass]="'show-value'">{{ value }}</span>
+
+        <mat-form-field [ngClass]="'edit-value'">
+          <input matInput value="{{ value }}" (blur)="editCellValue()">
+        </mat-form-field>
       </td>
     </tr>
 
     <tr [ngClass]="'add-row'">
       <td colspan="3">
-        <button mat-icon-button color="accent" aria-placeholder="Add row">
+        <button mat-icon-button color="accent" aria-placeholder="Add row" (click)="addRow()">
           <mat-icon>add</mat-icon>
         </button>
       </td>

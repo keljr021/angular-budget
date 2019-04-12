@@ -34,4 +34,16 @@ export class OutputTableComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickedCell() {
+    console.log('clicked on cell');
+  }
+
+  editCellValue() {
+    console.log('edit cell value');
+  }
+
+  addRow() {
+    console.log('add a row');
+  }
+
 }

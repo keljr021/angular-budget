@@ -54,12 +54,12 @@
       </mat-radio-group>
     </div>
 
-    <button mat-raised-button [ngClass]="'output-close'" color="accent">
+    <button mat-raised-button [ngClass]="'output-close'" color="accent" (click)="hideMenu()">
       Close
     </button>
   </div>
 
-  <div [ngClass]="'output-button'">
+  <div [ngClass]="'output-button'" (click)="showMenu()">
     <button mat-fab>
       <mat-icon>menu</mat-icon>
     </button>

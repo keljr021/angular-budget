@@ -12,4 +12,12 @@ export class OutputMenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  showMenu() {
+    console.log('show menu');
+  }
+
+  hideMenu() {
+    console.log('hide menu');
+  }
+
 }
