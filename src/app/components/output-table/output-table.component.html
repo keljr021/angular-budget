@@ -2,13 +2,18 @@
   <table>
     <caption>{{ caption }}</caption>
     <tr>
-      <th *ngFor="header in headerArray">
+      <th>&nbsp;</th>
+
+      <th *ngFor="let header of headers">
         {{ header }}
-      </th>
+      </th>      
     </tr>
-    <tr *ngFor="row in cellArray">
-      <td *ngFor="cell in row">
-        {{ cell }}
+
+    <tr *ngFor="let row of rows">
+      <td>{{ row.name }}</td>
+      
+      <td *ngFor="let value of row.values">
+        {{ value }}
       </td>
     </tr>
 

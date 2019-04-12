@@ -10,18 +10,24 @@ export class OutputTableComponent implements OnInit {
   addAverage: boolean;
   addTotal: boolean;
   caption: string;
-  headerArray: string[];
-  cellArray: string[][];
+  headers: string[];
+  rows: object[];
   
   
   constructor() {
     this.addAverage = false;
     this.addTotal = false;
-    this.caption = 'Table Caption YOLO';
-    this.headerArray = [null, 'Col 1', 'Col 2', 'Col 3'];
-    this.cellArray = [
-      ['main', '0', '0', '0'],
-      ['main', '0', '0', '0']
+    this.caption = 'Table Caption';
+    this.headers = ['Column X', 'Column Y', 'Column Z'];
+    this.rows = [
+      {
+        name: 'Row 1',
+        values: [0, 0, 0]
+      },
+      {
+        name: 'Row 2',
+        values: [0, 0, 0]
+      }
     ];
    }
 
