@@ -1,57 +1,32 @@
 <div>
   <table>
-    <caption>Table Caption</caption>
+    <caption>{{ caption }}</caption>
     <tr>
-      <th>Column</th>
-      <th>Column</th>
-      <th>Column</th>
-      <th>Column</th>
-      <th>Column</th>
-      <th>Column</th>
-    </tr>
-    <tr>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-    </tr>
-    <tr>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-    </tr>
-    <tr>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-    </tr>
-    <tr>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-    </tr>
-    <tr>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-      <td>Value</td>
-    </tr>
-  </table>
+      <th>&nbsp;</th>
 
-  <hr />
-  <p>Data:</p>
-  
+      <th *ngFor="let header of headers">
+        {{ header }}
+      </th>      
+    </tr>
+
+    <tr *ngFor="let row of rows">
+      <td>{{ row.name }}</td>
+
+      <td *ngFor="let value of row.values" (click)="clickedCell()">
+        <span [ngClass]="'show-value'">{{ value }}</span>
+
+        <mat-form-field [ngClass]="'edit-value'">
+          <input matInput value="{{ value }}" (blur)="editCellValue()">
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr [ngClass]="'add-row'">
+      <td colspan="3">
+        <button mat-icon-button color="accent" aria-placeholder="Add row" (click)="addRow()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </table> 
 </div>

@@ -1,28 +1,24 @@
 <div>
-  <div [ngClass]="'left-half'">  
+  <div [ngClass]="'output-menu'">
     <div>
       <h4>Insert Title?</h4>
       <mat-radio-group aria-label="title">
         <mat-radio-button #title value="no">No</mat-radio-button>
         <mat-radio-button #title value="yes">Yes</mat-radio-button>
       </mat-radio-group>
-      <br />
-    
-      <mat-form-field color="accent" class="title-value">
-        <input matInput type="text" #titleValue placeholder="Enter title...">
-      </mat-form-field>
     </div>
-    
+
     <div>
       <h4>Date Range</h4>
       <mat-form-field color="accent">
         <input matInput [matDatepicker]="startPicker" placeholder="Start Date">
-        <mat-datepicker-toggle matSuffix [for]="startPicker" (dateInput)="storeStartDate(startDate.value)" (dateChange)="storeStartDate(startDate.value)"></mat-datepicker-toggle>
+        <mat-datepicker-toggle matSuffix [for]="startPicker" (dateInput)="storeStartDate(startDate.value)"
+          (dateChange)="storeStartDate(startDate.value)"></mat-datepicker-toggle>
         <mat-datepicker #startPicker></mat-datepicker>
       </mat-form-field>
 
       &nbsp;
-      
+
       <mat-form-field color="accent">
         <input matInput [matDatepicker]="endPicker" placeholder="End Date">
         <mat-datepicker-toggle matSuffix [for]="endPicker" (dateInput)="storeEndDate(endDate.value)"
@@ -49,7 +45,7 @@
         <mat-radio-button #average value="both">Both</mat-radio-button>
       </mat-radio-group>
     </div>
-    
+
     <div>
       <h4>Insert Total Values? </h4>
       <mat-radio-group aria-label="total">
@@ -57,5 +53,16 @@
         <mat-radio-button #total value="columns">Yes</mat-radio-button>
       </mat-radio-group>
     </div>
+
+    <button mat-raised-button [ngClass]="'output-close'" color="accent" (click)="hideMenu()">
+      Close
+    </button>
   </div>
+
+  <div [ngClass]="'output-button'" (click)="showMenu()">
+    <button mat-fab>
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
 </div>
